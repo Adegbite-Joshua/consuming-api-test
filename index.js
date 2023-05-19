@@ -8,15 +8,19 @@ const fetchRiddle =()=>{
     .then((res)=>res.json())
     .then((res)=>{
         console.log(res);
-        document.getElementById('riddleDisplay').innerHTML = res.riddle
-        document.getElementById('answer').innerHTML = res.answer
+        response.riddle = res.riddle
+        response.answer = res.answer
     })
     .catch((err)=>{
         console.log(err);
     })
+
+    document.getElementById('riddleDisplay').innerHTML = response.riddle
+    document.getElementById('answer').innerHTML = response.answer
 }
 const showAnswer=()=>{
     document.getElementById('answer').style.display = 'block'
 }
+window.showAnswer = showAnswer
 
 window.onload = fetchRiddle()
