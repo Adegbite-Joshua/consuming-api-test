@@ -16,7 +16,6 @@ const fetchRiddle =()=>{
     })
 }
 const showAnswer=()=>{
-    console.log(document.getElementById('answer'));
     document.getElementById('answer').style.display = 'block'
 }
 
